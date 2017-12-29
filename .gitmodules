@@ -1,0 +1,6 @@
+[submodule "sources_forked/supertab"]
+	path = sources_forked/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "sources_forked/auto-pairs"]
+	path = sources_forked/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
