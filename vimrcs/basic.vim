@@ -30,6 +30,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:go_version_warning = 0
+
 " Sets how many lines of history VIM has to remember
 set history=500
 

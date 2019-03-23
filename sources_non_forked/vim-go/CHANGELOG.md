@@ -37,6 +37,17 @@ IMPROVEMENTS:
 * Add a function, `go#tool#DescribeBalloon`, to show information in a balloon
   with `'balloonexpr`. (Vim8 only).
   [[GH-1975]](https://github.com/fatih/vim-go/pull/1975)
+* Add initial support for `gopls`.
+  [[GH-2163]](https://github.com/fatih/vim-go/pull/2163).
+* Add `:GoDefType` to jump to the type definition of the identifier under the
+  cursor.
+  [[GH-2165]](https://github.com/fatih/vim-go/pull/2165)
+* Notify gopls about changes.
+  [[GH-2171]](https://github.com/fatih/vim-go/pull/2171)
+* Use gopls for code completion by default in Vim8 and Neovim.
+  [[GH-2172]](https://github.com/fatih/vim-go/pull/2172)
+* Respect `g:go_jump_to_error` when running `gometalinter` automatically on save.
+  [[GH-2176]](https://github.com/fatih/vim-go/pull/2176)
 
 BUG FIXES:
 * Fix opening of non-existent file from `:GoDeclsDir` when the current
