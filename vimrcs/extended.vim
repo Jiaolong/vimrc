@@ -178,9 +178,9 @@ map <F2> :call FormatCode()<CR>
 func! FormatCode()
     exec "w"
     if &filetype == 'C' || &filetype == 'h'
-        exec "!astyle --style=google %"
-    elseif &filetype == 'cpp'
-        exec "!astyle --style=google %"
+        exec "!astyle -n --style=google %"
+    elseif &filetype == 'cpp'|| &filetype == 'cu'
+        exec "!astyle -n --style=google %"
         return
     endif
 endfunc
