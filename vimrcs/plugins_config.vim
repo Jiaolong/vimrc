@@ -190,3 +190,15 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " disable markdown file folding
 let g:vim_markdown_folding_disabled = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => clang-format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-K> :py3f /usr/share/clang/clang-format-6.0/clang-format.py<cr>
+imap <C-K> <c-o>:py3f /usr/share/clang/clang-format-6.0/clang-format.py<cr>
+
+function! Formatonsave()
+  let l:formatdiff = 1
+  py3f /usr/share/clang/clang-format-6.0/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
